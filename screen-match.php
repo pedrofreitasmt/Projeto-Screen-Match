@@ -1,18 +1,7 @@
 <?php
 
-function exibeMensagemLancamento(int $ano): void {
-    if ($ano > 2022) {
-        echo "Esse filme é um lançamento.\n";
-    } elseif ($ano > 2020 && $ano <= 2022) {
-        echo "Esse filme ainda é novo\n";
-    } else {
-        echo "Esse filme não é um lançamento.\n";
-    }
-}
+require __DIR__ . "/funcoes-screen-match.php";
 
-function incluidoNoPlano(bool $planoPrime, int $anoLancamento): bool {
-    return $planoPrime || $anoLancamento < 2020;
-}
 
 $nomeFilme = "Top Gun - Maverick";
 
@@ -27,6 +16,7 @@ for ($contador = 1; $contador < $argc; $contador++) {
 $notaFilme = array_sum($notas) / $quantidadeDeNotas;
 $planoPrime = true;
 
+$incluidoNoPlano = incluidoNoPlano($planoPrime, $anoLancamento);
 
 echo "Bem-vindo(a) ao screen match!\n";
 echo "Nome do filme: $nomeFilme\n";
@@ -43,4 +33,11 @@ $genero = match ($nomeFilme) {
 echo "O gênero do filme é: $genero\n";
 
 $filme = ["nome" => "Thor: Ragnarok", "ano" => 2021, "nota" => 7.8, "genero" => "super-herói"];
+
+$posicaoDoisPontos = strpos($filme['nome'], ':');
+
+var_dump($posicaoDoisPontos);
+
+var_dump(substr($filme['nome'], 0));
+
 
