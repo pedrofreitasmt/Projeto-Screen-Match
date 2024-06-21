@@ -1,7 +1,6 @@
 <?php
 
-require __DIR__ . "/funcoes-screen-match.php";
-
+require __DIR__ . "/src/funcoes-screen-match.php";
 
 $nomeFilme = "Top Gun - Maverick";
 
@@ -32,7 +31,7 @@ $genero = match ($nomeFilme) {
 
 echo "O gênero do filme é: $genero\n";
 
-$filme = ["nome" => "Thor: Ragnarok", "ano" => 2021, "nota" => 7.8, "genero" => "super-herói"];
+$filme = criaFilme(nome:"Thor: Ragnarok", anoLancamento: 2021, nota: 7.8, genero:"super-herói");
 
 $posicaoDoisPontos = strpos($filme['nome'], ':');
 
