@@ -1,5 +1,5 @@
 <?php
-
+require __DIR__ . "/src/Modelo/Filme.php";
 require __DIR__ . "/src/funcoes-screen-match.php";
 
 $nomeFilme = "Top Gun - Maverick";
@@ -33,11 +33,9 @@ echo "O gênero do filme é: $genero\n";
 
 $filme = criaFilme(nome:"Thor: Ragnarok", anoLancamento: 2021, nota: 7.8, genero:"super-herói");
 
-$posicaoDoisPontos = strpos($filme['nome'], ':');
+echo $filme -> anoLancamento;
 
-var_dump($posicaoDoisPontos);
-
-var_dump(substr($filme['nome'], 0, $posicaoDoisPontos));
+$posicaoDoisPontos = strpos($filme -> nome, ':');
 
 $filmeComoStringJson = json_encode($filme);
 
