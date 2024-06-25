@@ -2,41 +2,21 @@
 require __DIR__ . "/src/Modelo/Filme.php";
 require __DIR__ . "/src/funcoes-screen-match.php";
 
-$nomeFilme = "Top Gun - Maverick";
+echo "Bem-vindo(a) ao Screen-Match!\n";
 
-$anoLancamento = 2022;
-$quantidadeDeNotas = $argc - 1;
-$notas = [];
+$filme = new Filme();
+$filme->defineAnoLancamento(2021);
+// $filme->nome = "Thor - Ragnarok";
+// $filme->anoLancamento = 2021;
+// $filme->genero = "Super-herói";
 
-for ($contador = 1; $contador < $argc; $contador++) {
-    $notas[] = (float) $argv[$contador];
-}
+$filme->avalia(10);
+$filme->avalia(7);
+$filme->avalia(8.2);
+$filme->avalia(6.7);
 
-$notaFilme = array_sum($notas) / $quantidadeDeNotas;
-$planoPrime = true;
+var_dump($filme);
 
-$incluidoNoPlano = incluidoNoPlano($planoPrime, $anoLancamento);
+echo $filme->media() . "\n";
 
-echo "Bem-vindo(a) ao screen match!\n";
-echo "Nome do filme: $nomeFilme\n";
-echo "Nota do filme: $notaFilme\n";
-echo "Ano de lançamento: $anoLancamento\n";
-
-$genero = match ($nomeFilme) {
-    "Top Gun - Maverick" => "ação",
-    "Thor: Ragnarok"=> "super-herói",
-    "Se beber não case"=> "comédia",
-    default => "Gênero não encontrado.",
-};
-
-echo "O gênero do filme é: $genero\n";
-
-$filme = criaFilme(nome:"Thor: Ragnarok", anoLancamento: 2021, nota: 7.8, genero:"super-herói");
-
-echo $filme -> anoLancamento;
-
-$posicaoDoisPontos = strpos($filme -> nome, ':');
-
-$filmeComoStringJson = json_encode($filme);
-
-file_put_contents(__DIR__ . '/filme.json', $filmeComoStringJson);
+echo $filme->anoLancamento();
