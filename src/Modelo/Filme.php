@@ -5,10 +5,10 @@ class Filme
     private array $notas;
 
     public function __construct(
-        public readonly string $nome,
-        public readonly int $anoLancamento,
-        public readonly string $genero
-        ) {
+        public readonly string $nome, 
+        public readonly int $anoLancamento, 
+        public readonly Genero $genero) 
+    {
         $this->notas = [];
     }
 
