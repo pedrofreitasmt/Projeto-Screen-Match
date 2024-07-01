@@ -3,8 +3,13 @@
 class Serie extends Titulo
 {
     public function __construct(
-        public readonly int $temporadas,
+        string $nome,
+        int $anoLancamento,
+        Genero $genero,
         public readonly int $episodiosPorTemporadas,
+        public readonly int $temporadas,
         public readonly int $minutosPorEpisodio,)
-    {}
+    {
+        parent::__construct($nome, $anoLancamento, $genero);
+    }
 }
