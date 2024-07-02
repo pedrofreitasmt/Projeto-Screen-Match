@@ -2,7 +2,7 @@
 
 class CalculadoraDeMaratona
 {
-    private int $duracaoDaMaratona;
+    private int $duracaoDaMaratona = 0;
 
     public function inclui(Titulo $titulo): void
     {
