@@ -1,6 +1,6 @@
 <?php
 
-class Filme extends Titulo
+class Filme extends Titulo implements Avaliavel
 {
     public function __construct(
         string $nome,

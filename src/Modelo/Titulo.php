@@ -1,13 +1,13 @@
 <?php
 
-abstract class Titulo
+abstract class Titulo implements Avaliavel
 {
     private array $notas;
     public function __construct(
         public readonly string $nome,
         public readonly int $anoLancamento,
-        public readonly Genero $genero,)
-    {
+        public readonly Genero $genero,
+    ) {
         $this->notas = [];
     }
 
@@ -18,8 +18,12 @@ abstract class Titulo
 
     public function media(): float
     {
-        $somaNotas = array_sum($this->notas);
         $quantidadeDeNotas = count($this->notas);
+        if ($quantidadeDeNotas === 0) {
+            return 0; // Retorne 0 ou um valor padrão
+        }
+
+        $somaNotas = array_sum($this->notas);
         return $somaNotas / $quantidadeDeNotas;
     }
 
