@@ -1,6 +1,6 @@
 <?php
 
-namespace ScreenMatch\src\Modelo;
+namespace src\Modelo;
 
 class Serie extends Titulo implements Avaliavel
 {
@@ -10,8 +10,8 @@ class Serie extends Titulo implements Avaliavel
         Genero $genero,
         public readonly int $episodiosPorTemporadas,
         public readonly int $temporadas,
-        public readonly int $minutosPorEpisodio,)
-    {
+        public readonly int $minutosPorEpisodio,
+    ) {
         parent::__construct($nome, $anoLancamento, $genero);
     }
 

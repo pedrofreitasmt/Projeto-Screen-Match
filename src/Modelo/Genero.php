@@ -1,8 +1,8 @@
 <?php
 
-namespace ScreenMatch\src\Modelo;
+namespace src\Modelo;
 
-enum Genero 
+enum Genero
 {
     Case Acao;
     Case Comedia;

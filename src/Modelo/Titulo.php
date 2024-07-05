@@ -1,6 +1,6 @@
 <?php
 
-namespace ScreenMatch\src\Modelo;
+namespace src\Modelo;
 
 abstract class Titulo implements Avaliavel
 {
@@ -10,7 +10,8 @@ abstract class Titulo implements Avaliavel
         public readonly string $nome,
         public readonly int $anoLancamento,
         public readonly Genero $genero,
-    ) {}
+    ) {
+    }
 
     abstract public function duracaoEmMinutos(): int;
 }
