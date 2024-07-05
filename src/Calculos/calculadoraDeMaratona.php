@@ -1,8 +1,8 @@
 <?php
 
-namespace ScreenMatch\Calculos;
+namespace ScreenMatch\src\Calculos;
 
-use ScreenMatch\Modelo\Titulo;
+use ScreenMatch\src\Modelo\Titulo;
 
 class CalculadoraDeMaratona
 {

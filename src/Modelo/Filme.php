@@ -1,6 +1,6 @@
 <?php
 
-namespace ScreenMatch\Modelo;
+namespace ScreenMatch\src\Modelo;
 
 class Filme extends Titulo implements Avaliavel
 {

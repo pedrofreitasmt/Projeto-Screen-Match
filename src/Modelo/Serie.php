@@ -1,6 +1,6 @@
 <?php
 
-namespace ScreenMatch\Modelo;
+namespace ScreenMatch\src\Modelo;
 
 class Serie extends Titulo implements Avaliavel
 {

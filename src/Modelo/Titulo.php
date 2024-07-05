@@ -1,6 +1,6 @@
 <?php
 
-namespace ScreenMatch\Modelo;
+namespace ScreenMatch\src\Modelo;
 
 abstract class Titulo implements Avaliavel
 {
