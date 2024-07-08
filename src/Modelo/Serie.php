@@ -15,7 +15,7 @@ class Serie extends Titulo implements Avaliavel
         parent::__construct($nome, $anoLancamento, $genero);
     }
 
-    // #[Override]
+     #[\Override]
     public function duracaoEmMinutos(): int
     {
         return $this->temporadas * $this->episodiosPorTemporadas * $this->minutosPorEpisodio;
