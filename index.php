@@ -1,14 +1,13 @@
 <?php
 
+use src\Calculos\CalculadoraDeMaratona;
+use src\Calculos\ConversorNotaEstrela;
+use src\Modelo\Episodio;
+use src\Modelo\Filme;
+use src\Modelo\Genero;
+use src\Modelo\Serie;
+
 require "autoload.php";
-
-use ScreenMatch\Modelo\{
-    Filme, Episodio, Serie, Genero, Titulo
-};
-
-use ScreenMatch\Calculos\{
-    calculadoraDeMaratona, ConversorNotaEstrela
-};
 
 echo "Bem-vindo(a) ao Screen-Match!\n";
 
@@ -26,7 +25,7 @@ $episodio->avalia(7);
 $episodio->avalia(9);
 $episodio->avalia(10);
 
-echo "A média do episódio é: " . $episodio->media() . "\n"; 
+echo "A média do episódio é: " . $episodio->media() . "\n";
 
 $calculadora = new CalculadoraDeMaratona();
 $calculadora->inclui($breakingBad);
